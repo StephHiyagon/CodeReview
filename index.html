@@ -1,46 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CapitanV.0.0.1</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Css copiado del que nos proporcionó Michelle-->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
+  <title>Laboratoria</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body style="text-align:justify">
 
-  <header>
-    <img src="images/logo-laboratoria.png" alt="logo de laboratoria">
-    <div class="dropdown"> Hola <label id="nombreCoder"></label>
-        <button onclick="myFunction()" class="dropbtn">&#9776;</button>
-        <div id="myDropdown" class="dropdown-content">
-        <a href="perfil.html"  id="perfil">Perfil</a>
-        <a href="chau.html">Salir</a>
-        </div></div>
-  </header>
-<h1>¿Qué es Laboratoria?</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h4>Temas</h4>
-<button type="button" name="button">Sprint 1</button> <button type="button" name="button">Sprint 2</button> <button type="button" name="button">Sprint 3</button>
-  <script src="js/app.js"></script>
-  <script>
-    var miParametro = location.search.split("nombre=")[1]
-    /* se buscará el parametro nombre del prompt, y se le colocará en el url, donde se fraccionará (split) y se tomarán dos valores:
-    el valor [0] que tomará a partir del "=" y el valor [1] que es el nombre per se.*/
-    var nombre = document.getElementById("nombreCoder");
-    // aquí solo buscar el elemento nombreCoder por el id que está en el dropdown
-    if (miParametro == undefined){
-            nombre.innerHTML = prompt("¿Cúal es tu nombre?");
-    } else {
-      nombre.innerHTML = miParametro;
-    }
-    document.getElementById("perfil").addEventListener("click",function(){
-        this.href += "?nombre=" + nombre.innerHTML;
-  /*tomando el id "perfil" del desplegable del dropdown, se crea una condición en donde si se le hace click, el url cambiará con el nombe dado
-  sin modificar el resto del url*/
-    })
-  </script>
+    <div style="text-align:center">
+    <img src="assets/images/LABORATORIA.png" width="20%" height="20%" align=center style="margin:10px 10px 10px 10px;">
+    </div>
+    <h2>¿Qué es laboratoria?</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h4>Temas</h4>
+//Inicio Botones
+    <input type="button" value="Sprint1" onclick="mostarOcultar('text1')">
+    <input type="button" value="Sprint2" onclick="mostarOcultar('text2')">
+    <input type="button" value="Sprint3" onclick="mostarOcultar('text3')">
+
+    <br/>
+    <div id="text1" style="display: none">
+
+            <h3>Sprint 1: Introducción a JavaScript</h3>
+                <ol style="font-weight: normal;">
+                  <li>Fundamentos de Programación</li>
+                  <li>Funciones</li>
+                  <li>Arreglos</li>
+                  <li>Objetos</li>
+                </ol><br>
+
+            <hr size="1px" color="gray" />
+
+            <h3>Quiz</h3>
+            <div id="mostrar1" style="display: block"></div>
+            <div id="area1" style="display: block">
+
+                <h3>Existen dos tipos de funciones</h3>
+                  <p><input id ="1ok1" name= "pregunta1" type="radio" >Expresadas y declaradas</p>
+                  <p><input id = "1aux11" name= "pregunta1" type="radio" >Explicitas y declaradas</p>
+                  <p><input id ="1aux12" name= "pregunta1" type="radio" >Expresadas y derivadas</p><br>
+                <h3>Elige una propiedad de los arreglos</h3>
+                  <p><input id ="1aux21" name= "pregunta2" type="radio" >clear</p>
+                  <p><input id ="1ok2" name= "pregunta2" type="radio" >pop</p>
+                  <p><input id ="1aux22" name= "pregunta2" type="radio" >add</p><br>
+                <h3>Un objeto tiene________ y________</h3>
+                  <p><input id ="1aux31" name= "pregunta3" type="radio" >números y letras</p>
+                  <p><input id ="1aux32" name= "pregunta3" type="radio" >partes y validaciones</p>
+                  <p><input id ="1ok3" name= "pregunta3" type="radio" >propiedades y valores</p><br>
+                  <input type="button" value="Enviar" onclick="quizResp1('area1','mostrar1');">
+            </div>
+
+    </div>
+
+    <div id="text2" style="display: block">
+
+      <h3>Sprint 2: Introducción al desarrollo  web y construcción de páginas web</h3>
+          <ol style="font-weight: normal;">
+            <li>Ciclo de vida del desarrollo web y arquitectura básica cliente/servidor/Configuración del ambiente de trabajo e introducción a git.</li>
+            <li>HTML y Javascript en el navegador</li>
+            <li>Manejo de comandos básicos de git en la terminal</li>
+            <li>Pruebas unitarias</li>
+            <li>Git/Resolución de conflictos/Branching model</li>
+            <li>DOM</li>
+          </ol><br>
+
+      <hr size="1px" color="gray" />
+
+      <h3>Quiz</h3>
+      <div id="mostrar2" style="display: block"></div>
+
+      <div id="area2" style="display: block">
+              <h3>¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
+                <p><input id ="aux11" name= "pregunta21" type="radio" >git init.</p>
+                <p><input id ="ok1" name= "pregunta21" type="radio" >git init</p>
+                <p><input id ="aux12" name= "pregunta21" type="radio" >git init add</p><br>
+              <h3>¿Cuál es la finalidad de hacer una prueba unitaria?</h3>
+                <p><input id ="ok2" name= "pregunta22" type="radio" >Comprobar que el código funciona correctamente</p>
+                <p><input id ="aux21" name= "pregunta22" type="radio" >Darle valores a los parámetros de dichas funciones</p>
+                <p><input id ="aux22" name= "pregunta22" type="radio" >No tiene ningún fin</p><br>
+              <h3>¿Qué significa DOM?</h3>
+                <p><input id ="aux31" name="pregunta23" type="radio" >Dual Objet Model</p>
+                <p><input id ="ok3" name="pregunta23" type="radio" >Document Object Model</p>
+                <p><input id ="aux32" name="pregunta23" type="radio" >Document Obsolet Model</p><br>
+                <input type="button" value="Enviar" onclick="quizResp2('area2','mostrar2');">
+      </div>
+
+    </div>
+
+    <div id="text3" style="display: none">
+            <h3>Sprint 3:</h3>
+            <p>No hay lecciones (Todavía)</p>
+            <hr size="1px" color="gray"/>
+    </div>
+
+    //Fin botones
+
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>
