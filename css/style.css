@@ -1,69 +1,79 @@
 html {
-  box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body {
-  margin: 0px;
-  font-family: 'Raleway', sans-serif;
+#main-container {
+    margin-bottom: 40px;
 }
 
-h1, p, h4{
-  text-align: justify;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
+.sprint-info {
+    padding-left: 12px;
+    padding-bottom: 20px;
 }
 
-.text-right {
-  text-align: right;
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 7px 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
-.text-center {
-  text-align: center;
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #eee;
 }
 
-header {
-  text-align: center;
-  padding: 14px 42px;
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
 }
 
-input {
-  margin-right: 14px;
-}
-
-
-
-.contenedor-contenido-pagina {
-  margin: 0 auto;
-  padding: 21px;
-  width: 1200px;
-}
-
-.hidden {
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100%;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.div-coder{
-  display: inline-block;
-  background-color: #FAAE27;
-  margin: 30px 0 0 30px;
-  padding: 20px 30px;
-  border: 1px solid black;
-}
-
-.div-salir-coder{
-  width: 100vw;
-  height: 100vh;
-  background-color: #FAAE27;
-  font-size: 50px;
-  text-align: center;
-  padding: 43vh 0 0 0 ;
-}
-
-.boton-volver-inicio{
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
   display: block;
-  margin: 40px auto;
+}
+
+.dropdown a:hover {
+  background-color: #eee;
+}
+
+.show {
+  display:block;
+}
+/*Diseño de los bloques de las estudiantes*/
+.students {
+    text-align: left;
+    background-color: #F8A819;    
+    margin: 20px 20px 20px 20px;
+    padding: 20px 30px 20px 10px;
+    border: 2px solid black;
+    width: 250px;
+    height: 110px;    
+    display: inline-block;
+}
+/*Posición del botón*/
+#btn {
+    display: block;
+    margin: 20px auto;
 }
