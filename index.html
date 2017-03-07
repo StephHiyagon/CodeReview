@@ -22,48 +22,87 @@
             <p>En Laboratoria identificamos jóvenes de bajos recursos con un potencial enorme y les damos la oportunidad de convertirse en desarrolladoras web. El resultado es una gran transformación para cada estudiante y una gran fuente de talento femenino de América Latina para el mundo tech.</p>
             <p>El contexto socio económico de nuestras estudiantes no es una desventaja. La adversidad que han enfrentado las ha hecho más fuertes y comprometidas para aprender en Laboratoria y valorar el trabajo. Por eso tenemos resultados superiores a los del "coding bootcamp" promedio de los EEUU de acuerdo a Course Report.</p>
             <h3>Temas</h3>
-            <button type="button" id="sprint-I">Sprint 1</button>
-            <button type="button" id="sprint-II">Sprint 2</button>
-            <button type="button" id="sprint-III">Sprint 3</button>
         </div>
-        <!--    EDITAR EL CONTENIDO DE LOS SPRINTS/QUIZ
-            <div id="sprint-content">
-                <h2>Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
-                    <div class=sprint-info>
-                        <ol>
-                            <li>Ciclo de vida del desarrollo web y arquitectura básica cliente/servidor/configuración del ambiente de trabajo e introducción a Git.</li>
-                            <li>HTML y JavaScript en el navegador</li>
-                            <li>Manejo de comandos básicos de Git en la terminal</li>
-                            <li>Pruebas unitarias</li>
-                            <li>Git/Resolución de conflictos/Branching model</li>
-                            <li>DOM</li>
-                        </ol>
-                    </div>
-                    <hr>
-                    <form>
-                    <h3>Quiz</h3>
-                    <h3>¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
-                        <label for='git-command' required>
-                            <input type='radio' name='git-command' value="1">git init .<br>
-                            <input type='radio' name='git-command' value="2">git init<br>
-                            <input type='radio' name='git-command' value="3">git init add<br>
-                        </label>
-                        <h3>¿Cuál es la finalidad de hacer una prueba unitaria?</h3>
-                        <label for='unit-testing' required>
-                            <input type='radio' name='unit-testing' value="1">Comprobar que el código funciona correctamente<br>
-                            <input type='radio' name='unit-testing' value="2">Darle valores  a los parámetros de dichas funciones<br>
-                            <input type='radio' name='unit-testing' value="3">No tiene ningún fin<br>
-                        </label>
-                        <h3>¿Qué significa DOM?</h3>
-                        <label for='dom' required>
-                            <input type='radio' name='dom' value="1">Dual Object Model<br>
-                            <input type='radio' name='dom' value="2">Document Object Model<br>
-                            <input type='radio' name='dom' value="3">Document Obsolet Model<br>
-                        </label>
-                    </form>
-                    <br>
-                    <button type='submit' onclick='result2()'>ENVIAR</button>
-            </div>-->
+        <!-- BOTONES -->
+        <input type="button" value="Sprint1" onclick="mostarOcultar('text1')">
+        <input type="button" value="Sprint2" onclick="mostarOcultar('text2')">
+        <input type="button" value="Sprint3" onclick="mostarOcultar('text3')">
+
+        <br/>
+        <div id="text1" style="display: none">
+
+                <h3>Sprint 1: Introducción a JavaScript</h3>
+                    <ol style="font-weight: normal;">
+                      <li>Fundamentos de Programación</li>
+                      <li>Funciones</li>
+                      <li>Arreglos</li>
+                      <li>Objetos</li>
+                    </ol><br>
+
+                <hr size="1px" color="gray" />
+
+                <h3>Quiz</h3>
+                <div id="mostrar1" style="display: block"></div>
+                <div id="area1" style="display: block">
+
+                    <h3>Existen dos tipos de funciones</h3>
+                      <p><input id ="1ok1" name= "pregunta1" type="radio" >Expresadas y declaradas</p>
+                      <p><input id = "1aux11" name= "pregunta1" type="radio" >Explicitas y declaradas</p>
+                      <p><input id ="1aux12" name= "pregunta1" type="radio" >Expresadas y derivadas</p><br>
+                    <h3>Elige una propiedad de los arreglos</h3>
+                      <p><input id ="1aux21" name= "pregunta2" type="radio" >clear</p>
+                      <p><input id ="1ok2" name= "pregunta2" type="radio" >pop</p>
+                      <p><input id ="1aux22" name= "pregunta2" type="radio" >add</p><br>
+                    <h3>Un objeto tiene________ y________</h3>
+                      <p><input id ="1aux31" name= "pregunta3" type="radio" >números y letras</p>
+                      <p><input id ="1aux32" name= "pregunta3" type="radio" >partes y validaciones</p>
+                      <p><input id ="1ok3" name= "pregunta3" type="radio" >propiedades y valores</p><br>
+                      <input type="button" value="Enviar" onclick="quizResp1('area1','mostrar1');">
+                </div>
+
+        </div>
+
+        <div id="text2" style="display: block">
+
+          <h3>Sprint 2: Introducción al desarrollo  web y construcción de páginas web</h3>
+              <ol style="font-weight: normal;">
+                <li>Ciclo de vida del desarrollo web y arquitectura básica cliente/servidor/Configuración del ambiente de trabajo e introducción a git.</li>
+                <li>HTML y Javascript en el navegador</li>
+                <li>Manejo de comandos básicos de git en la terminal</li>
+                <li>Pruebas unitarias</li>
+                <li>Git/Resolución de conflictos/Branching model</li>
+                <li>DOM</li>
+              </ol><br>
+
+          <hr size="1px" color="gray" />
+
+          <h3>Quiz</h3>
+          <div id="mostrar2" style="display: block"></div>
+
+          <div id="area2" style="display: block">
+                  <h3>¿Cuál es el comando para iniciar un repositorio desde la consola?</h3>
+                    <p><input id ="aux11" name= "pregunta21" type="radio" >git init.</p>
+                    <p><input id ="ok1" name= "pregunta21" type="radio" >git init</p>
+                    <p><input id ="aux12" name= "pregunta21" type="radio" >git init add</p><br>
+                  <h3>¿Cuál es la finalidad de hacer una prueba unitaria?</h3>
+                    <p><input id ="ok2" name= "pregunta22" type="radio" >Comprobar que el código funciona correctamente</p>
+                    <p><input id ="aux21" name= "pregunta22" type="radio" >Darle valores a los parámetros de dichas funciones</p>
+                    <p><input id ="aux22" name= "pregunta22" type="radio" >No tiene ningún fin</p><br>
+                  <h3>¿Qué significa DOM?</h3>
+                    <p><input id ="aux31" name="pregunta23" type="radio" >Dual Objet Model</p>
+                    <p><input id ="ok3" name="pregunta23" type="radio" >Document Object Model</p>
+                    <p><input id ="aux32" name="pregunta23" type="radio" >Document Obsolet Model</p><br>
+                    <input type="button" value="Enviar" onclick="quizResp2('area2','mostrar2');">
+          </div>
+
+        </div>
+
+        <div id="text3" style="display: none">
+                <h3>Sprint 3:</h3>
+                <p>No hay lecciones (Todavía)</p>
+                <hr size="1px" color="gray"/>
+        </div>
+        <!-- BOTONES FIN -->
         <script type="text/javascript" src="Assets/js/main.js"></script>
 	</body>
 </html>
