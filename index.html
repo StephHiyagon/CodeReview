@@ -6,15 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>CapitanV.0.0.1</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Css copiado del que nos proporcionó Michelle-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <img src="images/logo-laboratoria.png" alt="logo de laboratoria">
+    <div class="dropdown"> Hola <label id="nombreCoder"></label>
+        <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+        <div id="myDropdown" class="dropdown-content">
+        <a href="perfil.html"  id="perfil">Perfil</a>
+        <a href="chau.html">Salir</a>
+        </div></div>
   </header>
 <h1>¿Qué es Laboratoria?</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <h4>Temas</h4>
 <button type="button" name="button">Sprint 1</button> <button type="button" name="button">Sprint 2</button> <button type="button" name="button">Sprint 3</button>
   <script src="js/app.js"></script>
+  <script>
+    var miParametro = location.search.split("nombre=")[1]
+    /* se buscará el parametro nombre del prompt, y se le colocará en el url, donde se fraccionará (split) y se tomarán dos valores:
+    el valor [0] que tomará a partir del "=" y el valor [1] que es el nombre per se.*/
+    var nombre = document.getElementById("nombreCoder");
+    // aquí solo buscar el elemento nombreCoder por el id que está en el dropdown
+    if (miParametro == undefined){
+            nombre.innerHTML = prompt("¿Cúal es tu nombre?");
+    } else {
+      nombre.innerHTML = miParametro;
+    }
+    document.getElementById("perfil").addEventListener("click",function(){
+        this.href += "?nombre=" + nombre.innerHTML;
+  /*tomando el id "perfil" del desplegable del dropdown, se crea una condición en donde si se le hace click, el url cambiará con el nombe dado
+  sin modificar el resto del url*/
+    })
+  </script>
 </body>
 </html>
