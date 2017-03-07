@@ -43,7 +43,7 @@ function showList() {
         } ],
         list = "",
         p = document.getElementById("students");
-    
+
     profiles.forEach(function (e) {
         list += "<div class = 'students'>" +
                     "<ul style='list-style: none'>" +
@@ -54,7 +54,7 @@ function showList() {
                     "</ul>" +
                 "</div>";
     });
-    
+
     p.innerHTML = list;
 }
 
