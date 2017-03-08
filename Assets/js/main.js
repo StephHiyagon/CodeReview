@@ -13,13 +13,14 @@ var n, //name of user - username
     area,
     i;
 
-function name() {
-    "use strict";
-    do {
-        n = prompt("Bienvenido(a)!\n¿Cuál es tu nombre?");
-    } while (n === "");
-    username.innerHTML = n;
-}
+    /*function name() {
+        "use strict";
+        do {
+            n = prompt("Bienvenido(a)!\n¿Cuál es tu nombre?");
+        } while (n === "");
+        username.innerHTML = n;
+    }
+    */
 
 function menu() {
     "use strict";
@@ -42,7 +43,7 @@ mostarOcultar = function (divtexte) {
         divtext2 = document.getElementById("text2");
         break;
 	}
-    
+
 	divtext = document.getElementById(divtexte);
 
 	if (divtext.style.display === "none") {
@@ -58,7 +59,7 @@ quizResp1 = function (area, mostrar) {
     "use strict";
 	cont = 0;
 	mostrar = document.getElementById(mostrar);
-    
+
 	if ((document.getElementById('1aux11').checked === false &&
         document.getElementById('1aux12').checked === false &&
         document.getElementById('1ok1').checked === false) || (document.getElementById('1aux21').checked === false &&
@@ -74,7 +75,7 @@ quizResp1 = function (area, mostrar) {
     } else if (document.getElementById('ok3').checked === true) {
         cont += 1;
     }
-    
+
 	area = document.getElementById(area);
     mostrar.innerHTML = "Tienes " + cont + " correcta(s).";
 	area.style.display = "none";
@@ -84,7 +85,7 @@ var quizResp2 = function (area, mostrar) {
     "use strict";
     cont = 0;
 	mostrar = document.getElementById(mostrar);
-    
+
     if ((document.getElementById('aux11').checked === false &&
          document.getElementById('aux12').checked === false &&
          document.getElementById('ok1').checked === false) || (document.getElementById('aux21').checked === false && document.getElementById('aux22').checked === false &&

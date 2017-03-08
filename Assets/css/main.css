@@ -2,7 +2,7 @@ html {
     font-family: Helvetica, sans-serif;
 }
 
-#logo {    
+#logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -63,16 +63,21 @@ html {
 
 .students {
     text-align: left;
-    background-color: #F8A819;    
+    background-color: #F8A819;
     margin: 20px 20px 20px 20px;
     padding: 20px 30px 20px 10px;
     border: 2px solid black;
     width: 250px;
-    height: 110px;    
+    height: 110px;
     display: inline-block;
 }
 
 #btn {
+      text-align: center;
     display: block;
-    margin: 20px auto;
+    align: center;
+    width: 105px;
+    height: 20px;
+    display: inline-block;
+    botton: 50%;
 }

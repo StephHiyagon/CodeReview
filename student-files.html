@@ -8,10 +8,18 @@
 		<link rel="stylesheet" href="Assets/css/main.css">
 	</head>
     <body>
-        <div align="center">            
+        <div align="center">
             <div id="students"></div>
         </div>
-        <button type="button" id="btn"><a href="index.html" style="text-decoration: none; color:black">Regresa al inicio</a></button>
+				<p align="center">
+        <button type="button" ><a href="index.html" id="btn" style="text-decoration: none; color:black height=20px">Regresar al inicio</a></button>
+				</p>
         <script type="text/javascript" src="Assets/js/student-files.js"></script>
+				<script>
+				var miParametro = location.search.split('nombre=')[1]
+				document.getElementById("btn").addEventListener('click',function() {
+				this.href += "?nombre="+miParametro;
+				})
+				</script>
 	</body>
 </html>
