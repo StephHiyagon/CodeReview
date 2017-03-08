@@ -5,14 +5,14 @@
 		<title>El capitán v.0.0.1</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="initial-scale=1.0">
-		<link rel="stylesheet" href="Assets/css/main.css">		
-		<div class="dropdown">Hola coder <span id="username"></span>
-            <button onclick="menu()" class="dropbtn">&#9776;</button>
+		<link rel="stylesheet" href="Assets/css/main.css">
+				<div class="dropdown"> Hola <label id="username"></label>
+            <button onClick="menu()" class="dropbtn">&#9776;</button>
             <div id="myDropdown" class="dropdown-content">
-                <a href="student-files.html">Coders</a>
-                <a href="exit.html">Salir</a>
+            <a href="student-files.html"  id="perfil">Perfil</a>
+            <a href="exit.html">Salir</a>
             </div>
-        </div>
+          </div>
 	</head>
 
 	<body>
@@ -92,5 +92,22 @@
         </div>
         <!-- BOTONES FIN -->
         <script type="text/javascript" src="Assets/js/main.js"></script>
+				<script>
+				var miParametro = location.search.split("nombre=")[1]
+				/* se buscará el parametro nombre del prompt, y se le colocará en el url, donde se fraccionará (split) y se tomarán dos valores:
+				el valor [0] que tomará a partir del "=" y el valor [1] que es el nombre per se.*/
+				var nombre = document.getElementById("username");
+				// aquí solo buscar el elemento nombreCoder por el id que está en el dropdown
+				if (miParametro == undefined){
+					nombre.innerHTML = prompt("¿Cúal es tu nombre?");
+				} else {
+				nombre.innerHTML = miParametro;
+				}
+				document.getElementById("perfil").addEventListener("click",function(){
+				this.href += "?nombre=" + nombre.innerHTML;
+				/*tomando el id "perfil" del desplegable del dropdown, se crea una condición en donde si se le hace click, el url cambiará con el nombre dado
+				sin modificar el resto del url*/
+				})
+				</script>
 	</body>
 </html>
